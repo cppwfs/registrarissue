@@ -20,7 +20,8 @@ public class MyRegistrar implements ImportBeanDefinitionRegistrar, EnvironmentAw
 
 	@Override
 	public void registerBeanDefinitions(AnnotationMetadata annotationMetadata, BeanDefinitionRegistry registry) {
-		for(int i = 0; i < 5; i++) {
+// This will work if we only run this code once.  Hence set the 2 to 1 and it will work.
+		for(int i = 0; i < 2; i++) {
 
 			BeanDefinitionBuilder builder = BeanDefinitionBuilder.rootBeanDefinition(TestBeanBFactory.class);
 			builder.addConstructorArgReference("testBeanA");
